@@ -21,7 +21,7 @@ def setup_vault_pass():
             "gpg",
             "-a",
             "-o",
-            ".vault-pass.asc",
+            ".vault_pass.asc",
             "-e",
             "-s",
             "-r",
