@@ -1,0 +1,4 @@
+all:
+  children:
+  hosts:
+    {{ cookiecutter.inventory_hostname }}:

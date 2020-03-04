@@ -1,0 +1,11 @@
+{
+  "project_name": "skynet",
+  "inventory_hostname": "t800",
+  "ansible_host": "t800.skynet.com",
+  "role_name": "terminate_connor",
+  "gpg_recipient": "v.maisonneuve@gmail.com",
+  "vcs": [
+    "git",
+    "none"
+  ]
+}
