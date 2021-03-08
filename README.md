@@ -5,7 +5,7 @@ A Cookiecutter template for Ansible playbooks.
 ## Features
 
 * Secret management with [Ansible Vault](https://docs.ansible.com/ansible/latest/user_guide/vault.html) and [GnuPG](https://gnupg.org/).
-* Linting with [Ansible Lint](https://ansible-lint.readthedocs.io/).
+* Linting with [Ansible Lint](https://ansible-lint.readthedocs.io/) and [yamllint](https://yamllint.readthedocs.io/).
 
 ## Quickstart
 
