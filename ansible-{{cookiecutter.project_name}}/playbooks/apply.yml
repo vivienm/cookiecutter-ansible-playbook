@@ -1,4 +1,4 @@
 - hosts: all
   roles:
   - role: {{ cookiecutter.role_name }}
-    tags: []
+    tags: [{{ cookiecutter.role_name }}]
