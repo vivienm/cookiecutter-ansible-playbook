@@ -4,8 +4,8 @@ import string
 import subprocess
 
 
-def setup_vcs():
-    if "{{ cookiecutter.vcs }}" == "git":
+def setup_vcs() -> None:
+    if "{{ cookiecutter.version_control }}" == "git":
         subprocess.run(["git", "init"], check=True)
     else:
         os.remove(".gitignore")
@@ -14,24 +14,29 @@ def setup_vcs():
 BASE64_CHARS = (string.ascii_letters + string.digits + "+/").encode()
 
 
-def setup_vault_pass():
+def setup_vault_pass() -> None:
     passphrase = bytes((secrets.choice(BASE64_CHARS) for _ in range(64)))
     subprocess.run(
         [
             "gpg",
-            "-a",
-            "-o",
-            ".vault_pass.asc",
-            "-e",
-            "-s",
-            "-r",
-            "{{ cookiecutter.gpg_recipient }}",
+            "--sign",
+            "--encrypt",
+            "--armor",
+            *(
+                "--recipient={}".format(recipient.strip())
+                for recipient in "{{ cookiecutter.gpg_recipients }}".split(",")
+            ),
+            "--output=.vault_pass.asc",
         ],
         input=passphrase,
         check=True,
     )
 
 
-if __name__ == "__main__":
+def main() -> None:
     setup_vcs()
     setup_vault_pass()
+
+
+if __name__ == "__main__":
+    main()

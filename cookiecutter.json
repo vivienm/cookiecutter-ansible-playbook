@@ -2,9 +2,9 @@
   "project_name": "skynet",
   "inventory_hostname": "t800",
   "ansible_host": "t800.skynet.com",
-  "role_name": "terminate_connor",
-  "gpg_recipient": "v.maisonneuve@gmail.com",
-  "vcs": [
+  "role_name": "cyborg",
+  "gpg_recipients": "v.maisonneuve@gmail.com",
+  "version_control": [
     "git",
     "none"
   ]
