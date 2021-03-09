@@ -6,6 +6,7 @@ A Cookiecutter template for Ansible playbooks.
 
 * Secret management with [Ansible Vault](https://docs.ansible.com/ansible/latest/user_guide/vault.html) and [GnuPG](https://gnupg.org/).
 * Linting with [Ansible Lint](https://ansible-lint.readthedocs.io/) and [yamllint](https://yamllint.readthedocs.io/).
+* Testing with [Nox](https://nox.thea.codes/en/stable/).
 
 ## Quickstart
 
