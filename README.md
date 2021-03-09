@@ -1,6 +1,6 @@
 # Ansible playbook template
 
-A Cookiecutter template for Ansible playbooks.
+An opinionated Cookiecutter template for Ansible playbooks.
 
 ## Features
 
