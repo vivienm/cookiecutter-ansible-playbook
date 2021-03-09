@@ -11,7 +11,7 @@ An opinionated Cookiecutter template for Ansible playbooks.
 ## Quickstart
 
 Install the latest [Cookiecutter](https://cookiecutter.readthedocs.io/) if you haven't installed it yet.
-You can refer to installation instructions [here](https://cookiecutter.readthedocs.io/en/1.7.2/installation.html), or use [pipx](https://pipxproject.github.io/pipx/):
+You can refer to installation instructions [here](https://cookiecutter.readthedocs.io/en/latest/installation.html), or use [pipx](https://pipxproject.github.io/pipx/):
 
 ```console
 $ pipx install cookiecutter
