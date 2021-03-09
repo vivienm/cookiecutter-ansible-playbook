@@ -9,7 +9,10 @@ def ansible_lint(session):
 
 
 @nox.session(venv_backend="none")
-@nox.parametrize("playbook", sorted(os.listdir("playbooks")))
+@nox.parametrize(
+    "playbook",
+    sorted(playbook.name for playbook in os.scandir("playbooks") if playbook.is_file()),
+)
 def ansible_syntax(session, playbook):
     session.run("ansible-playbook", "--syntax-check", f"playbooks/{playbook}")
 
